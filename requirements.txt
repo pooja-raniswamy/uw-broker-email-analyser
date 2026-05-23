@@ -1,0 +1,23 @@
+# ARIA — Automated Risk Intelligence for Underwriting
+# Core dependencies
+
+# LangGraph + LangChain
+langgraph
+langchain
+langchain-anthropic
+databricks-langchain
+langgraph-checkpoint-postgres
+
+# Database
+psycopg
+psycopg-binary
+
+# Evaluation
+ragas
+
+# UI
+streamlit
+
+# Utilities
+pydantic
+python-dotenv

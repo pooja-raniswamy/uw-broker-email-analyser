@@ -1,0 +1,30 @@
+bundle:
+  name: uw-broker-email-analyser
+
+targets:
+  dev:
+    mode: development
+    default: true
+    workspace:
+      host: https://dbc-67c325a6-f0af.cloud.databricks.com
+
+resources:
+  apps:
+    aria_app:
+      name: aria-underwriting
+      description: ARIA — Automated Risk Intelligence for Underwriting
+      source_code_path: ../aria/app
+      config:
+        command:
+          - streamlit
+          - run
+          - app.py
+          - --server.port=8080
+          - --server.address=0.0.0.0
+        env:
+          - name: PYTHONPATH
+            value: /Workspace/Users/swamy.poojarani@gmail.com/uw-broker-email-analyser
+          - name: DATABRICKS_HOST
+            value: https://dbc-67c325a6-f0af.cloud.databricks.com
+          - name: DATABRICKS_WAREHOUSE_ID
+            value: 739424d97a740adf
